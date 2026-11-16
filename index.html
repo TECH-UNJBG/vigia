@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="media/tech-unjbg-icon.png"><script>(function(){var R=document.documentElement;function set(t){R.setAttribute('data-theme',t);try{localStorage.setItem('vigia-theme',t)}catch(e){}[].forEach.call(document.querySelectorAll('.thm'),function(b){b.textContent=t==='light'?'☾':'☀'})}var t='light';try{t=localStorage.getItem('vigia-theme')||'light'}catch(e){}R.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.thm');if(b)set(R.getAttribute('data-theme')==='light'?'dark':'light')});document.addEventListener('DOMContentLoaded',function(){set(R.getAttribute('data-theme'))});new MutationObserver(function(){[].forEach.call(document.querySelectorAll('.thm'),function(b){if(!b.textContent)b.textContent=R.getAttribute('data-theme')==='light'?'☾':'☀'})}).observe(document.documentElement,{childList:true,subtree:true})})();</script>
+<title>Sistema VIGIA · La llama que no se ve · NASA Space Apps 2026</title>
+<meta name="description" content="VIGIA: inteligencia artificial que detecta la llama invisible en microgravedad con datos reales de la NASA. NASA Space Apps Challenge 2026 · Flame in Freefall.">
+<style>
+:root{--bg:#05080f;--bg2:#080d17;--card:#0b111c;--line:#1a2433;--tx:#e8eef5;--mu:#8b96a5;--g:#4cc3ff;--g2:#2f8fe0;--ia:#2be37a;--fire:#ff9a3c;--ice:#b9a6ff;--warn:#ffc04d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--g);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* nav */
+header.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(5,8,15,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:700;font-size:22px;color:var(--g);letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.logo svg{width:22px;height:22px}
+nav.menu{display:flex;gap:26px;flex:1;justify-content:flex-end;min-width:0;overflow-x:auto;scrollbar-width:none}nav.menu::-webkit-scrollbar{display:none}
+nav.menu a{color:var(--mu);font-size:14.5px;font-weight:500;white-space:nowrap}nav.menu a:hover,nav.menu a.on{color:var(--g)}
+@media(max-width:760px){nav.menu{gap:16px}nav.menu a{font-size:13px}.logo{font-size:19px}}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:100px 0 60px}
+#stars{position:absolute;inset:0;width:100%;height:100%}
+.earth{position:absolute;left:50%;top:56%;width:1500px;height:1500px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 50% 35%,#0f2238 0%,#0a1626 35%,#060c16 62%,#05080f 75%);box-shadow:0 -2px 60px rgba(90,170,255,.18),inset 0 18px 60px rgba(120,190,255,.10)}
+.earth:after{content:"";position:absolute;inset:-2px;border-radius:50%;border-top:1.5px solid rgba(140,200,255,.35);filter:blur(1px)}
+.hero .in{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--g);font-weight:700;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow svg{width:18px;height:18px}
+.hero h1{font-size:clamp(64px,13vw,150px);line-height:1;margin:18px 0 18px;font-weight:700;letter-spacing:-.03em;color:var(--g);text-shadow:none}
+.hero p.sub{max-width:720px;margin:0 auto;color:#aab4c0;font-size:clamp(17px,2.2vw,22px)}
+.hero p.sub b{color:var(--tx);font-weight:600}
+.btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:10px;font-weight:600;font-size:16.5px;border:1.5px solid var(--g);transition:.2s;cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--g);color:#04121d;box-shadow:none}
+.btn.fill:hover{box-shadow:0 6px 18px rgba(76,195,255,.25);transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--g)}.btn.out:hover{background:rgba(76,195,255,.08)}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:24px;height:38px;border:2px solid rgba(76,195,255,.6);border-radius:14px;z-index:2}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:3px;height:8px;margin-left:-1.5px;background:var(--g);border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(12px)}}
+/* secciones */
+section{padding:90px 0;position:relative}
+.kick{color:var(--g);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:clamp(30px,4.6vw,48px);line-height:1.1;margin:10px 0 14px;letter-spacing:-.03em;font-weight:700}
+h2 em{font-style:normal;color:var(--g)}
+.lead{color:var(--mu);font-size:18px;max-width:760px;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+@media(max-width:860px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.kpi b{display:block;font-size:clamp(32px,4vw,44px);color:var(--g);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.kpi span{color:var(--mu);font-size:14px}
+.kpi small{display:block;color:#5d6877;font-size:12px;margin-top:6px}
+/* simulación */
+.simgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+@media(max-width:860px){.simgrid{grid-template-columns:1fr}}
+.pane{background:#02040a;border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
+.pane canvas{display:block;width:100%;height:380px}
+.pane .lab{position:absolute;left:16px;top:14px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tx)}
+.pane .lab small{display:block;color:var(--mu);font-weight:500;letter-spacing:0;text-transform:none;font-size:12.5px}
+.pane .cap{position:absolute;left:16px;right:16px;bottom:12px;font-size:13px;color:#b9c3cf}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px}
+.seg button{background:none;border:0;color:var(--mu);padding:10px 16px;border-radius:9px;font:600 14.5px inherit;font-family:inherit;cursor:pointer}
+.seg button.on{background:var(--g);color:#04121d}
+.state{margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+@media(max-width:600px){.state{grid-template-columns:1fr}}
+.badge{font-weight:700;font-size:15px;letter-spacing:.04em;padding:10px 16px;border-radius:10px;white-space:nowrap;text-align:center}
+.badge.a{background:rgba(255,154,60,.15);color:var(--fire);border:1px solid rgba(255,154,60,.5)}
+.badge.l{background:rgba(185,166,255,.12);color:var(--ice);border:1px solid rgba(185,166,255,.55);animation:pl 1.2s infinite}
+.badge.p{background:rgba(255,192,77,.12);color:var(--warn);border:1px solid rgba(255,192,77,.5)}
+.badge.c{background:rgba(76,195,255,.14);color:var(--g);border:1px solid rgba(76,195,255,.55)}
+@keyframes pl{50%{box-shadow:0 0 22px rgba(185,166,255,.45)}}
+.state p{margin:0;color:#c3ccd7;font-size:15px}.state p b{color:var(--tx)}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px 8px;margin-top:18px}
+.chart canvas{width:100%;height:230px;display:block}
+.chart .t{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--mu)}
+.chart .t b{color:var(--tx)}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 5px 0 12px;vertical-align:-1px}
+/* tierra vs espacio */
+.vs{display:grid;grid-template-columns:300px 1fr;gap:26px;margin-top:34px;align-items:start}
+@media(max-width:860px){.vs{grid-template-columns:1fr}}
+.vid{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;position:relative;max-width:320px}
+.vid video{display:block;width:100%;height:auto}
+.vid .tag{position:absolute;left:10px;top:10px;background:rgba(5,8,15,.8);border:1px solid var(--g);color:var(--g);font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mu);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+td:first-child{color:var(--mu);width:24%}
+td.e{color:#ffd2a6}td.s{color:#bfe7ff}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 8px}
+.note{color:#6b7684;font-size:13px;margin-top:12px}
+/* pasos */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;counter-reset:s}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+.step:before{counter-increment:s;content:"0" counter(s);color:var(--g);font-weight:700;font-size:14px;letter-spacing:.08em}
+.step h3{margin:8px 0 6px;font-size:19px}.step p{margin:0;color:var(--mu);font-size:14.5px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+@media(max-width:860px){.why{grid-template-columns:1fr}}
+.why div{border-left:3px solid var(--g);background:var(--card);border-radius:0 14px 14px 0;padding:18px 20px}
+.why b{display:block;font-size:17px;margin-bottom:4px}.why span{color:var(--mu);font-size:14.5px}
+.cta{text-align:center;background:radial-gradient(600px 260px at 50% 0,rgba(76,195,255,.14),transparent),var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+footer{padding:40px 0 60px;color:#6b7684;font-size:13.5px}
+footer a{color:#9aa6b4}footer ul{padding-left:18px;margin:8px 0}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s}.reveal.vis{opacity:1;transform:none}
+.lg-chip{width:34px;height:34px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;justify-content:center;padding:3px}.lg-chip img{width:100%;height:auto}
+.logo small{font-size:11px;color:var(--mu);font-weight:600;letter-spacing:.04em;margin-left:2px}
+@media(max-width:520px){.logo small{display:none}}
+.nasa-bg{position:absolute;inset:0;background:url(media/llama-nasa.jpg) center 38%/min(980px,120vw) no-repeat;opacity:.33;filter:saturate(1.2);-webkit-mask:radial-gradient(closest-side,#000 55%,transparent);mask:radial-gradient(closest-side,#000 55%,transparent)}
+.credit{position:absolute;right:14px;bottom:10px;font-size:11px;color:#56606d;z-index:2}
+.fbrand{display:flex;gap:16px;align-items:center;margin-bottom:10px}.lg-big{background:#fff;border-radius:14px;padding:8px;width:110px;flex:none}.lg-big img{width:100%;display:block}
+.sys{font-size:clamp(14px,1.8vw,19px);font-weight:500;letter-spacing:.55em;margin:18px 0 -6px;padding-left:.55em;color:#c9d6e3;text-transform:uppercase}.ia{color:var(--ia)}.hero h1 .ia{text-shadow:none}
+.btn.fill{background:var(--ia);border-color:var(--ia);color:#03140a}.btn.fill:hover{box-shadow:0 6px 22px rgba(43,227,122,.35)}
+.eyebrow,.kick{color:var(--ia)}.step:before{color:var(--ia)}.why div{border-left-color:var(--ia)}
+.kpi:nth-child(even) b{color:var(--ia)}.seg button.on{background:var(--ia);color:#03140a}
+.paper{margin:30px 0 0;background:#fff;color:#111;border-radius:14px;padding:22px 22px 16px}
+.paper svg{width:100%;height:auto;display:block}.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}.paper{padding:12px}}
+.paper figcaption{font:15px/1.55 "Latin Modern Roman","CMU Serif","Cambria","Times New Roman",serif;color:#222;margin-top:12px;border-top:1px solid #ddd;padding-top:10px}
+.chart{background:#fff;border-color:#e2e8f0}.chart .t{color:#555;font-family:"Latin Modern Roman","CMU Serif",Cambria,"Times New Roman",serif;font-size:14px}.chart .t b{color:#222}
+.thm{width:34px;height:30px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--mu);cursor:pointer;font-size:15px;flex:none}.thm:hover{color:var(--g);border-color:var(--g)}
+.pane{--tx:#e8eef5;--mu:#8b96a5}.hero{--g:#4cc3ff;--ia:#2be37a;--tx:#e8eef5;background:#05080f}
+html[data-theme=light]{--bg:#ffffff;--bg2:#f6f8fa;--card:#ffffff;--line:#e5e7eb;--tx:#111827;--mu:#4b5563;--g:#0b6fb8;--ia:#0f9d58}html[data-theme=light] .kick{color:#6b7280}html[data-theme=light] .btn.fill:not(.hero .btn){background:#0b6fb8;border-color:#0b6fb8;color:#fff}
+html[data-theme=light] header.top{background:rgba(244,247,251,.9)}
+html[data-theme=light] td.e{color:#b4570f}html[data-theme=light] td.s{color:#1f6fb0}
+html[data-theme=light] .state p{color:#3d4b5e}html[data-theme=light] .pane .cap{color:#c9d3de}
+html[data-theme=light] .lg-chip,html[data-theme=light] .lg-big{box-shadow:0 0 0 1px #dbe3ee}
+html[data-theme=light] .paper{box-shadow:0 1px 3px rgba(15,26,42,.08),0 0 0 1px #e2e8f0}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="#inicio"><span class="lg-chip"><img src="media/tech-unjbg-icon.png" alt="TECH-UNJBG"></span><span>VIG<span class="ia">IA</span></span><small>by TECH-UNJBG</small></a>
+<nav class="menu"><a href="#inicio" class="on">Inicio</a><a href="#idea">La idea</a><a href="#sim">Simulación</a><a href="#tierra">Tierra vs espacio</a><a href="#resultados">Resultados</a><a href="#como">Cómo funciona</a><a href="dashboard.html">Panel</a><a href="simulador.html">Simulador</a></nav><button class="thm" aria-label="Cambiar modo claro u oscuro"></button></div></header>
+
+<section class="hero" id="inicio"><div class="nasa-bg" role="img" aria-label="Llama esférica en microgravedad (imagen NASA)"></div><canvas id="stars"></canvas><div class="earth"></div><span class="credit">Imagen de fondo: NASA</span>
+<div class="in wrap"><div class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c2 4 6 5 6 10a6 6 0 0 1-12 0c0-3 2-4 2-7 2 1 3 3 4 3 0-2-1-4 0-6z"/></svg>Desafío NASA Space Apps 2026 · Flame in Freefall · Equipo TECH-UNJBG</div>
+<div class="sys">Sistema</div><h1>VIG<span class="ia">IA</span></h1>
+<p class="sub">Panel impulsado por <b>SI (superinteligencia)</b> que detecta <b>la llama que no se ve</b>: en el espacio, un fuego puede parecer apagado y <b>seguir ardiendo 33 segundos</b>. Lo demostramos con datos reales de la Estación Espacial.</p>
+<div class="btns"><a class="btn fill" href="#sim">Ver la simulación</a><a class="btn out" href="#tierra">Tierra vs espacio</a></div></div></section>
+
+<section id="idea"><div class="wrap reveal"><div class="kick">La idea</div>
+<h2>Que el fuego no se vea <em>no significa</em> que esté apagado.</h2>
+<p class="lead">En la ISS, una gota de combustible encendida pierde su llama visible a los 12.8 s… pero sigue consumiéndose con una <b style="color:var(--tx)">llama fría</b>, invisible para una cámara y para el ojo humano. VIGIA, un sistema SI, aprende de los experimentos de la NASA y no declara "apagado" hasta confirmarlo con datos.</p>
+<div class="kpis"><div class="kpi"><b>33 s</b><span>de combustión invisible tras apagarse la llama</span><small>NASA PSI-117 · ISS</small></div><div class="kpi"><b>674</b><span>ensayos reales de fuego en microgravedad</span><small>FLEX · CFI · ACME · BASS · SAME-R · SAFFIRE</small></div><div class="kpi"><b>80.5 %</b><span>de acierto prediciendo cómo termina el fuego</span><small>validado con 261 ensayos FLEX</small></div><div class="kpi"><b>0</b><span>datos de fuego en la Luna o Marte hasta hoy</span><small>NASA espera LUCI y FM2</small></div></div></div></section>
+
+<section id="sim" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap"><div class="reveal"><div class="kick">Simulación con datos NASA</div>
+<h2>Qué pasa a los <em>12.8 segundos</em></h2>
+<p class="lead">Izquierda: una llama en la Tierra. Derecha: una gota de n-heptano ardiendo en la ISS, con su tamaño real medido por la NASA segundo a segundo. Cambia entre lo que ve una cámara y lo que ve VIGIA.</p></div>
+<div class="simgrid"><div class="pane"><canvas id="cE"></canvas><div class="lab">Tierra · 1 g<small>Tacna, ≈95 kPa · simulación</small></div><div class="cap">El aire caliente sube y estira la llama hacia arriba.</div></div>
+<div class="pane"><canvas id="cS"></canvas><div class="lab">Espacio · microgravedad<small id="sLab">ISS · gota de n-heptano · t = 0.0 s</small></div><div class="cap" id="sCap">Sin "arriba": la llama es una esfera y el oxígeno llega solo por difusión.</div></div></div>
+<div class="ctrl"><button class="btn fill" id="play" style="padding:11px 24px">Reproducir</button><div class="seg" id="view"><button data-v="cam" class="on">Vista de cámara</button><button data-v="vig">Vista VIGIA</button></div><div class="seg" id="spd"><button data-s="1">1×</button><button data-s="2" class="on">2×</button><button data-s="4">4×</button></div></div>
+<div class="state"><div class="badge a" id="badge">LLAMA ACTIVA</div><p id="stTxt"></p></div>
+<div class="chart"><div class="t"><span>Tamaño de la gota, d² (mm²) — <b>puntos medidos por la NASA</b></span><span class="lg"><i style="background:#2f5fb3"></i>medido PSI-117<i style="background:rgba(139,58,143,.35)"></i>llama fría</span></div><canvas id="cD"></canvas></div></div></section>
+
+<section id="tierra"><div class="wrap"><div class="reveal"><div class="kick">Aporte desde Tacna</div>
+<h2>La misma llama, <em>dos mundos</em></h2>
+<p class="lead">Grabamos nuestro mechero Bunsen (diseñado y fabricado por el equipo) en Tacna, a gravedad normal. Al lado, lo que la NASA midió en órbita. La diferencia la explica una sola cosa: la gravedad.</p></div>
+<div class="vs"><div class="vid"><video src="media/bunsen.mp4" poster="media/bunsen_poster.jpg" autoplay muted loop playsinline></video><span class="tag">Tacna · 1 g · cámara lenta</span></div>
+<div class="tw"><table><tr><th></th><th>Tierra (nuestro mechero)</th><th>Espacio (ISS)</th></tr>
+<tr><td>Gravedad</td><td class="e">1 g</td><td class="s">caída libre (microgravedad)</td></tr>
+<tr><td>Forma</td><td class="e">cono alargado que sube</td><td class="s">esfera alrededor de la gota</td></tr>
+<tr><td>Cómo llega el oxígeno</td><td class="e">convección: el aire caliente sube y entra aire fresco</td><td class="s">solo difusión, mucho más lento</td></tr>
+<tr><td>Color</td><td class="e">cono azul + penacho amarillo</td><td class="s">amarilla al inicio, luego azul tenue o invisible</td></tr>
+<tr><td>¿Se ve cuando se apaga?</td><td class="e">sí</td><td class="s">no siempre: 33 s de llama fría invisible</td></tr>
+<tr><td>Presión</td><td class="e">≈95 kPa (estimado por altitud)</td><td class="s">≈101 kPa (aire de cabina)</td></tr></table></div></div>
+<p class="note">Comparación cualitativa: el mechero quema gas licuado premezclado y la gota de la NASA es una llama de difusión de n-heptano. Lo que se compara es el efecto de la gravedad en la forma y el transporte de oxígeno.</p></div></section>
+
+<section id="resultados"><div class="wrap"><div class="reveal"><div class="kick">Resultados con datos NASA</div>
+<h2>Lo que dicen <em>los datos</em></h2>
+<p class="lead">Cuatro mediciones reales de la Estación Espacial que sostienen la idea de VIGIA, y el esquema del sistema. Los puntos son datos NASA; las líneas discontinuas, el modelo publicado.</p></div>
+<figure class="paper reveal"><div class="fgrid"><div id="fa"></div><div id="fb"></div><div id="fc"></div><div id="fd"></div></div>
+<figcaption><b>Figura 1.</b> <i>Comportamiento de llamas en microgravedad (ISS).</i> a) Diámetro de la gota y de la llama en el tiempo, n-heptano a 1 atm (PSI-117). b) Diámetro de extinción frente a la presión, llama caliente y llama fría (PSI-117). c) Tasa de quemado frente al oxígeno a ≈1 atm, sin diluyentes (FLEX, PSI-69). d) Ensayos de llamas de gas y aparición de llama fría según presión y oxígeno (ACME CFI-G, PSI-159).</figcaption></figure>
+<figure class="paper reveal"><div id="fs"></div>
+<figcaption><b>Figura 2.</b> <i>Esquema del Sistema VIGIA a bordo.</i> Los sensores de la cabina alimentan la adquisición de datos; la IA compara con la base de ensayos NASA y la máquina de estados decide. El enlace con la Tierra solo actualiza y audita, nunca bloquea la decisión.</figcaption></figure></div></section>
+<section id="como" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap reveal"><div class="kick">Cómo funciona</div>
+<h2>De la Estación Espacial a <em>una decisión en segundos</em></h2>
+<div class="steps"><div class="step"><h3>Datos reales</h3><p>674 ensayos de fuego hechos en la ISS y en la nave Cygnus, del archivo público PSI de la NASA.</p></div><div class="step"><h3>Ordena</h3><p>Todo en un solo formato y unidades SI: presión, oxígeno, flujo, combustible y resultado.</p></div><div class="step"><h3>Interpreta</h3><p>Compara cada situación con los ensayos más parecidos y dice cuánto confía en su respuesta.</p></div><div class="step"><h3>Vigila</h3><p>Junta cámara, infrarrojo y gases. Si la llama desaparece pero el combustible sigue consumiéndose, avisa: <b style="color:var(--tx)">sigue ardiendo</b>.</p></div></div>
+<div class="why"><div><b>Luna y Marte</b><span>Las bases tendrán 30 % de O₂ o más a menor presión: los materiales arden con más facilidad.</span></div><div><b>Sin esperar a la Tierra</b><span>Desde Marte un mensaje tarda hasta 24 minutos. Un fuego se decide en segundos.</span></div><div><b>Honesta</b><span>No hay datos de fuego en gravedad parcial. VIGIA lo dice y señala qué experimento falta.</span></div></div></div></section>
+
+<section class="cta"><div class="wrap reveal"><h2>Explora a fondo</h2><p class="lead" style="margin:0 auto">El panel completo con los 674 ensayos, el ranking de investigaciones y el simulador de física.</p>
+<div class="btns"><a class="btn fill" href="dashboard.html">Abrir el panel completo</a><a class="btn out" href="simulador.html">Simulador interactivo</a></div></div></section>
+
+<footer><div class="wrap"><div class="fbrand"><span class="lg-big"><img src="media/tech-unjbg.png" alt="Logo TECH-UNJBG"></span><div><b style="color:var(--g);font-size:20px">VIG<span class="ia">IA</span></b><br>Equipo <b style="color:var(--tx)">TECH-UNJBG</b> · Tacna, Perú · NASA Space Apps Challenge 2026</div></div>
+<ul><li>NASA Physical Sciences Informatics (PSI): PSI-117 (llamas frías, n-heptano), PSI-69 FLEX, PSI-39 CFI, PSI-159 ACME, PSI-101 SAME-R, PSI-98 SAFFIRE-I.</li><li>BASS-II: Zhao et al. 2015, NASA NTRS 20150008962.</li><li>Lo marcado como "simulación" o "estimado" no es dato medido. Los puntos de la gráfica son mediciones de la NASA.</li></ul></div></footer>
+<script>
+var PSI={"d2":[[0.04,16.237],[6.38,14.941],[7.02,14.764],[7.72,14.528],[8.36,14.232],[9.06,14.055],[9.7,13.76],[10.4,13.583],[11.03,13.287],[11.74,12.992],[12.37,12.755],[13.08,12.519],[13.71,12.283],[14.49,11.988],[15.05,11.751],[15.68,11.515],[16.39,11.279],[17.09,11.043],[17.66,10.806],[18.43,10.57],[19.07,10.334],[19.7,10.097],[20.41,9.802],[21.04,9.566],[21.6,9.329],[22.52,9.034],[23.15,8.857],[23.72,8.562],[24.35,8.325],[25.13,8.03],[25.69,7.734],[26.47,7.498],[27.1,7.262],[27.73,6.966],[28.44,6.789],[29.07,6.494],[29.71,6.257],[30.41,6.021],[31.12,5.785],[31.75,5.49],[32.39,5.253],[33.16,5.017],[33.72,4.781],[34.36,4.485],[34.99,4.249],[35.77,4.013],[36.4,3.717],[37.04,3.54],[37.74,3.245],[38.45,3.009],[39.08,2.832],[39.78,2.536],[40.49,2.359],[41.05,2.123],[41.83,1.827],[42.46,1.65],[43.17,1.473],[43.8,1.237],[44.43,1.001],[45.07,0.824],[45.77,0.647],[46.41,0.648],[47.18,0.649],[48.24,0.65],[48.52,0.709],[49.15,0.71]],"df":[[0.04,12.78],[0.8,14.44],[1.4,19.14],[1.97,19.33],[2.67,19.62],[3.37,21.19],[4.0,21.57],[4.7,22.5],[5.27,23.15],[5.97,23.43],[6.68,23.72],[7.38,24.37],[8.09,24.66],[8.72,25.03],[9.36,25.23],[10.07,25.33],[10.79,23.41],[11.35,24.34],[12.09,20.3],[13.19,8.0],[13.87,11.78],[14.43,12.24],[15.13,12.62],[15.85,12.08],[16.48,13.01],[17.26,13.2],[17.82,13.21],[18.53,13.4],[19.09,13.69],[19.73,13.79],[20.51,13.52],[21.08,13.99],[21.86,13.54],[22.43,13.46],[23.14,13.47],[23.85,13.2],[24.42,12.84],[25.26,13.77],[25.83,13.23],[26.47,13.15],[27.18,13.34],[27.82,12.8],[28.53,12.63],[29.24,12.91],[29.88,12.37],[30.66,12.66],[31.23,12.3],[31.87,11.75],[32.58,11.67],[33.29,11.77],[33.93,11.23],[34.63,11.52],[35.28,10.61],[35.92,9.88],[36.63,9.8],[37.2,9.71],[37.98,9.72],[38.69,9.83],[39.41,8.73],[40.05,8.65],[40.61,8.66],[41.26,7.84],[42.04,7.48],[42.68,6.85],[43.39,6.86],[43.97,6.04],[44.68,5.13],[45.4,3.94],[46.04,3.49]]};
+(function(){
+var $=function(s){return document.querySelector(s)},RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fit(c){var d=Math.min(2,window.devicePixelRatio||1),w=c.clientWidth,h=c.clientHeight;if(c.width!==Math.round(w*d)){c.width=Math.round(w*d);c.height=Math.round(h*d)}var g=c.getContext('2d');g.setTransform(d,0,0,d,0,0);return{g:g,w:w,h:h}}
+function interp(a,t){if(t<=a[0][0])return a[0][1];for(var i=1;i<a.length;i++)if(a[i][0]>=t){var p=a[i-1],q=a[i];return p[1]+(q[1]-p[1])*(t-p[0])/((q[0]-p[0])||1)}return a[a.length-1][1]}
+/* estrellas del hero */
+var st=[],sc=$('#stars');for(var i=0;i<220;i++)st.push([Math.random(),Math.random(),Math.random()*1.3+.2,Math.random()*6.3,Math.random()<.12]);
+function stars(t){var s=fit(sc),g=s.g;g.clearRect(0,0,s.w,s.h);st.forEach(function(p){var a=.35+.35*Math.sin(t/900+p[3]);g.fillStyle=p[4]?'rgba(76,195,255,'+a+')':'rgba(220,235,255,'+a+')';g.beginPath();g.arc(p[0]*s.w,(p[1]*s.h+(p[4]?t/60:0))%s.h,p[2],0,7);g.fill()})}
+/* datos PSI-117: llama visible hasta 12.8 s; combustión (llama fría) hasta 45.8 s */
+var T1=12.8,T2=45.8,TC=47.5,TM=50,D2=PSI.d2,DF=PSI.df;
+var S={t:0,on:false,spd:2,view:'cam',last:0};
+function d2At(t){return interp(D2,Math.max(t,D2[0][0]))}
+/* Tierra: mechero Bunsen (llama premezclada) */
+function nz(k,a){return Math.sin(k*1.7+a)*.5+Math.sin(k*3.1+a*2.3)*.3+Math.sin(k*7.9+a*.7)*.2}
+function earth(now){var s=fit($('#cE')),g=s.g,W=s.w,H=s.h,cx=W/2,by=H*.74,k=now/1000;
+ var bgg=g.createRadialGradient(cx,by-H*.2,10,cx,by-H*.2,H*.75);bgg.addColorStop(0,'#0d0c12');bgg.addColorStop(1,'#020308');g.fillStyle=bgg;g.fillRect(0,0,W,H);
+ var fl=1+.06*nz(k*2,0),sw=nz(k*1.3,1)*6,FH=H*.52*fl,tip=[cx+sw,by-FH];
+ function cone(w,h,sx){g.beginPath();g.moveTo(cx-w,by);g.bezierCurveTo(cx-w*1.05,by-h*.45,cx-w*.25+sx*.4,by-h*.82,cx+sx,by-h);g.bezierCurveTo(cx+w*.25+sx*.4,by-h*.82,cx+w*1.05,by-h*.45,cx+w,by);g.closePath()}
+ g.save();g.globalCompositeOperation='lighter';
+ g.filter='blur(16px)';var gl=g.createRadialGradient(cx,by-FH*.35,4,cx,by-FH*.35,FH*.7);gl.addColorStop(0,'rgba(90,120,255,.35)');gl.addColorStop(1,'rgba(90,120,255,0)');g.fillStyle=gl;g.beginPath();g.arc(cx,by-FH*.35,FH*.7,0,7);g.fill();
+ g.filter='blur(3px)';var m=g.createLinearGradient(0,by,0,by-FH);m.addColorStop(0,'rgba(80,120,255,.8)');m.addColorStop(.4,'rgba(130,100,240,.5)');m.addColorStop(.7,'rgba(255,170,90,.5)');m.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=m;cone(26,FH,sw);g.fill();
+ g.filter='blur(2px)';var t2=g.createLinearGradient(0,by-FH*.45,0,by-FH);t2.addColorStop(0,'rgba(255,190,90,0)');t2.addColorStop(.5,'rgba(255,205,120,.75)');t2.addColorStop(1,'rgba(255,230,170,0)');g.fillStyle=t2;cone(14,FH*.98,sw*1.1);g.fill();
+ g.filter='blur(1px)';var ic=g.createLinearGradient(0,by,0,by-H*.15);ic.addColorStop(0,'rgba(120,200,255,.95)');ic.addColorStop(.7,'rgba(70,140,255,.75)');ic.addColorStop(1,'rgba(70,140,255,0)');g.fillStyle=ic;g.beginPath();g.moveTo(cx-13,by);g.quadraticCurveTo(cx-6,by-H*.11,cx+sw*.15,by-H*.15*fl);g.quadraticCurveTo(cx+6,by-H*.11,cx+13,by);g.fill();
+ g.restore();g.filter='none';
+ for(var i=0;i<10;i++){var ph=((k*.25+i/10)%1),y=tip[1]-ph*H*.3,x=tip[0]+nz(k+i,i)*(6+ph*20);g.strokeStyle='rgba(180,170,200,'+(.025*(1-ph))+')';g.lineWidth=6;g.beginPath();g.moveTo(x,y);g.lineTo(x+nz(k*2,i)*4,y-14);g.stroke()}
+ var tb=g.createLinearGradient(cx-16,0,cx+16,0);tb.addColorStop(0,'#2a2d34');tb.addColorStop(.45,'#7a808c');tb.addColorStop(1,'#25272d');g.fillStyle=tb;g.fillRect(cx-15,by,30,H-by);g.fillStyle='#8a909b';g.fillRect(cx-17,by-2,34,5);
+ g.fillStyle='rgba(76,195,255,.9)';g.font='600 12px "Segoe UI",system-ui';g.textAlign='right';g.fillText('↑ aire caliente sube',W-14,H*.2);g.textAlign='left'}
+/* Espacio: gota con llama esférica (tamaño real PSI-117) */
+var SP=[];for(var q=0;q<140;q++)SP.push([Math.random()*6.283,Math.acos(2*Math.random()-1),Math.random(),Math.random()*6.3]);
+function space(now){var s=fit($('#cS')),g=s.g,W=s.w,H=s.h,cx=W/2,cy=H*.52,t=S.t,k=now/1000,pxmm=Math.min(W,H)*.78/27;
+ g.fillStyle='#010207';g.fillRect(0,0,W,H);
+ var d=Math.sqrt(Math.max(d2At(t),0)),rd=Math.max(d/2*pxmm,1.4),df=interp(DF,t),R=df/2*pxmm;
+ if(t<T1){var a=Math.min(1,t/.5)*(t>T1-1.2?Math.max(0,(T1-t)/1.2):1);
+  g.save();g.globalCompositeOperation='lighter';
+  g.filter='blur(22px)';var gw=g.createRadialGradient(cx,cy,R*.3,cx,cy,R*1.3);gw.addColorStop(0,'rgba(255,150,50,0)');gw.addColorStop(.7,'rgba(255,140,40,'+(.35*a)+')');gw.addColorStop(1,'rgba(255,120,30,0)');g.fillStyle=gw;g.beginPath();g.arc(cx,cy,R*1.3,0,7);g.fill();
+  g.filter='blur(4px)';var sh=g.createRadialGradient(cx,cy,rd,cx,cy,R);sh.addColorStop(0,'rgba(255,170,60,0)');sh.addColorStop(.55,'rgba(255,160,60,'+(.18*a)+')');sh.addColorStop(.86,'rgba(255,225,150,'+(.8*a)+')');sh.addColorStop(.95,'rgba(255,190,90,'+(.55*a)+')');sh.addColorStop(1,'rgba(255,150,60,0)');g.fillStyle=sh;g.beginPath();g.arc(cx,cy,R,0,7);g.fill();
+  g.filter='blur(3px)';g.strokeStyle='rgba(80,120,255,'+(.55*a)+')';g.lineWidth=Math.max(3,R*.06);g.beginPath();g.arc(cx,cy,R*1.03,0,7);g.stroke();
+  g.filter='none';SP.forEach(function(p,i){var th=p[0]+k*.12*(p[2]-.5),ph=p[1],rr=R*(.62+.33*p[2]),x=cx+rr*Math.sin(ph)*Math.cos(th),y=cy+rr*Math.cos(ph),z=Math.sin(ph)*Math.sin(th),fl=.5+.5*Math.sin(k*9+p[3]);if(z<-.2)return;g.fillStyle='rgba(255,'+(150+((i*7)%80))+',70,'+(a*(.35+.6*fl)*(.5+.5*z))+')';g.beginPath();g.arc(x,y,.7+1.6*p[2]*fl,0,7);g.fill()});
+  g.restore()}
+ else if(t<T2&&S.view==='vig'){var p=.6+.25*Math.sin(k*3);g.save();g.globalCompositeOperation='lighter';g.filter='blur(10px)';var gc=g.createRadialGradient(cx,cy,rd,cx,cy,R*1.15);gc.addColorStop(0,'rgba(140,120,255,0)');gc.addColorStop(.75,'rgba(120,140,255,'+(.22*p)+')');gc.addColorStop(.92,'rgba(185,166,255,'+(.4*p)+')');gc.addColorStop(1,'rgba(185,166,255,0)');g.fillStyle=gc;g.beginPath();g.arc(cx,cy,R*1.15,0,7);g.fill();g.restore();g.filter='none';
+  g.strokeStyle='rgba(185,166,255,.55)';g.setLineDash([4,5]);g.beginPath();g.arc(cx,cy,R,0,7);g.stroke();g.setLineDash([]);g.fillStyle='#b9a6ff';g.font='600 12px "Segoe UI",system-ui';g.textAlign='center';g.fillText('llama fría detectada · Ø '+df.toFixed(1)+' mm',cx,cy-R-10)}
+ var lit=t<T1?1:(S.view==='vig'?.8:.18),dg=g.createRadialGradient(cx-rd*.35,cy-rd*.35,rd*.1,cx,cy,rd);dg.addColorStop(0,'rgba(235,240,255,'+lit+')');dg.addColorStop(.6,'rgba(150,170,210,'+lit+')');dg.addColorStop(1,'rgba(40,60,110,'+lit+')');g.fillStyle=dg;g.beginPath();g.arc(cx,cy,rd,0,7);g.fill();
+ if(S.view==='vig'){g.fillStyle='#2be37a';g.font='600 12px "Segoe UI",system-ui';g.textAlign='center';g.fillText('gota Ø '+d.toFixed(2)+' mm',cx,cy+rd+18)}
+ g.textAlign='left';
+ if(S.view==='cam'&&t>=T1&&t<T2){g.fillStyle='rgba(255,255,255,.55)';g.font='600 12px "Segoe UI",system-ui';g.fillText('CÁMARA: sin llama',W-140,H*.2)}}
+/* gráfica d² con datos NASA (estilo artículo) */
+function chart(){var s=fit($('#cD')),g=s.g,W=s.w,H=s.h,L=46,R=12,T=12,B=30,X=function(v){return L+v/TM*(W-L-R)},Y=function(v){return H-B-v/17*(H-T-B)},SF='13px "Latin Modern Roman","CMU Serif",Cambria,"Times New Roman",serif';g.fillStyle='#fff';g.fillRect(0,0,W,H);
+ g.fillStyle='rgba(139,58,143,.08)';g.fillRect(X(T1),T,X(T2)-X(T1),H-T-B);g.fillStyle='#8b3a8f';g.font='italic '+SF;g.fillText('llama fría invisible (33 s)',X(T1)+8,T+18);
+ g.font=SF;g.strokeStyle='#222';g.fillStyle='#222';g.lineWidth=1;g.strokeRect(L+.5,T+.5,W-L-R,H-T-B);
+ for(var i=0;i<=5;i++){var v=i*3.4,y=Y(v);g.beginPath();g.moveTo(L,y);g.lineTo(L+5,y);g.moveTo(W-R,y);g.lineTo(W-R-5,y);g.stroke();g.textAlign='right';g.fillText(v.toFixed(0),L-6,y+4)}
+ g.textAlign='center';for(i=0;i<=5;i++){var x=X(i*10);g.beginPath();g.moveTo(x,H-B);g.lineTo(x,H-B-5);g.moveTo(x,T);g.lineTo(x,T+5);g.stroke();g.fillText(i*10,x,H-B+17)}
+ g.font='italic '+SF;g.fillText('t',X(25)-6,H-3);g.font=SF;g.fillText(' (s)',X(25)+8,H-3);
+ D2.forEach(function(p){var past=p[0]<=S.t;g.beginPath();g.arc(X(p[0]),Y(p[1]),2.8,0,7);if(past){g.fillStyle='#2f5fb3';g.fill()}else{g.strokeStyle='#9fb3d6';g.stroke()}});
+ g.strokeStyle='#222';g.setLineDash([5,4]);g.beginPath();g.moveTo(X(S.t),T);g.lineTo(X(S.t),H-B);g.stroke();g.setLineDash([])}
+function state(){var t=S.t,b=$('#badge'),p=$('#stTxt'),h;
+ if(t<T1){b.className='badge a';b.textContent='LLAMA ACTIVA';h='La llama es visible y la gota se consume. Cámara y VIGIA coinciden.'}
+ else if(t<T2){b.className='badge l';b.textContent='COMBUSTIÓN LATENTE';h='<b>La cámara ya no ve llama, pero la gota sigue achicándose.</b> VIGIA: "No está apagado". Riesgo oculto: <b>'+(t-T1).toFixed(1)+' s</b>.'}
+ else if(t<TC){b.className='badge p';b.textContent='EXTINCIÓN PROBABLE';h='La gota dejó de consumirse. VIGIA espera una ventana de confirmación.'}
+ else{b.className='badge c';b.textContent='EXTINCIÓN CONFIRMADA';h='Ahora sí: la combustión terminó. Una cámara habría dado la alerta '+(T2-T1).toFixed(0)+' s antes de tiempo.'}
+ p.innerHTML=h;$('#sLab').textContent='ISS · gota de n-heptano · t = '+t.toFixed(1)+' s'}
+function loop(now){var dt=S.last?(now-S.last)/1000:0;S.last=now;if(S.on){S.t+=dt*S.spd;if(S.t>=TM){S.t=TM;S.on=false;$('#play').textContent='Repetir'}}
+ if(!RM||!S.drawn){stars(now)}earth(now);space(now);chart();state();S.drawn=1;requestAnimationFrame(loop)}
+$('#play').onclick=function(){if(S.t>=TM)S.t=0;S.on=!S.on;this.textContent=S.on?'Pausa':'Reproducir'};
+[].forEach.call(document.querySelectorAll('#view button'),function(b){b.onclick=function(){S.view=b.dataset.v;[].forEach.call(document.querySelectorAll('#view button'),function(x){x.classList.toggle('on',x===b)})}});
+[].forEach.call(document.querySelectorAll('#spd button'),function(b){b.onclick=function(){S.spd=+b.dataset.s;[].forEach.call(document.querySelectorAll('#spd button'),function(x){x.classList.toggle('on',x===b)})}});
+$('#cD').addEventListener('pointerdown',function(e){var r=this.getBoundingClientRect();S.t=Math.max(0,Math.min(TM,(e.clientX-r.left-42)/(r.width-52)*TM));});
+/* aparición al hacer scroll y menú activo */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.12});[].forEach.call(document.querySelectorAll('.reveal'),function(x){io.observe(x)});
+var secs=['inicio','idea','sim','tierra','resultados','como'];window.addEventListener('scroll',function(){var y=scrollY+120,cur='inicio';secs.forEach(function(id){var e=document.getElementById(id);if(e&&e.offsetTop<=y)cur=id});[].forEach.call(document.querySelectorAll('nav.menu a'),function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)})},{passive:true});
+requestAnimationFrame(loop)})();
+var FIG={"hf":[[0.5,3.48],[0.75,3.57],[1.0,3.56],[1.25,3.62],[3.0,3.56]],"cf":[[0.5,1.89],[0.75,0.49],[1.0,0.39],[1.0,0.48],[1.25,0.38],[3.0,0.0]],"hfm":[[0.5,3.43],[1.25,3.74]],"cfm":[[0.5,1.19],[1.25,0.33]],"flex":[[21.0,0.52,0],[21.0,0.6,0],[21.0,0.58,0],[21.0,0.6,0],[21.0,0.48,0],[21.0,0.51,0],[21.0,0.67,1],[21.0,0.79,1],[30.0,0.74,0],[30.0,0.59,0],[30.0,0.85,1],[30.0,0.68,1],[21.0,0.48,0],[21.0,0.44,0],[21.0,0.43,1],[30.0,0.63,0],[30.0,0.73,0],[21.0,0.54,0],[21.0,0.5,1],[21.0,0.27,0],[21.0,0.59,1],[21.0,0.52,1],[21.0,0.65,1],[30.0,0.7,1],[18.0,0.42,0],[18.0,0.43,0],[18.0,0.45,0],[18.0,0.41,0],[18.0,0.39,1],[18.0,0.51,1],[18.0,0.6,1],[15.0,0.4,0],[15.0,0.38,0],[15.0,0.36,0],[15.0,0.39,0],[14.0,0.94,1],[15.0,0.41,1],[15.0,0.4,0],[15.0,0.52,1],[15.0,0.56,1],[15.0,0.77,1],[13.0,0.37,0],[13.0,0.37,0],[14.0,0.34,0],[14.0,0.35,0],[13.0,0.25,1],[13.0,0.35,0],[12.0,0.35,0],[12.0,0.35,0],[12.0,0.35,0],[12.0,0.38,0],[21.0,0.47,0],[21.0,0.52,0],[21.0,0.43,1],[21.0,0.42,1],[21.0,0.5,1],[21.0,0.54,1],[21.0,0.69,1],[16.0,0.34,1],[16.0,0.42,1],[15.0,0.37,1],[14.0,0.24,1],[14.0,0.39,1],[14.0,0.3,0],[14.0,0.38,0],[13.0,0.36,0],[13.0,0.35,0],[12.0,0.36,0],[12.0,0.35,0],[12.0,0.38,0],[21.0,0.52,1],[21.0,0.57,1],[21.0,0.57,1]],"cfig":[[0.944,39.4,0],[0.944,39.0,1],[0.944,38.6,1],[0.944,38.3,1],[0.944,38.0,1],[0.944,38.0,0],[0.944,37.6,1],[0.944,37.3,1],[0.944,37.0,1],[0.944,36.5,1],[1.013,21.0,1],[1.013,21.0,0],[1.013,18.0,1],[1.013,18.0,1],[1.013,39.6,0],[1.013,39.3,0],[1.013,39.1,0],[1.013,38.8,0],[1.013,38.6,0],[1.013,38.3,0],[1.013,38.3,0],[1.013,38.1,0],[1.013,38.1,0],[1.013,38.1,0],[1.013,23.4,0],[1.013,23.4,0],[1.013,23.3,0],[1.013,23.3,0],[1.013,23.3,0],[1.013,23.3,0],[0.507,39.3,0],[0.507,38.5,0],[0.507,37.7,0],[0.507,36.9,0],[0.507,35.9,0],[0.507,35.4,0],[0.507,35.4,0],[0.507,35.4,0],[0.507,35.3,0],[0.507,21.0,0],[0.507,20.9,0],[0.507,20.7,0],[0.507,20.7,0],[0.507,20.7,0],[0.944,39.5,0],[0.944,39.4,0],[0.944,39.1,0],[0.944,38.7,0],[0.944,38.0,0],[0.944,37.8,0],[0.944,37.7,0],[0.944,37.7,0],[0.944,36.6,0],[0.944,36.6,0],[0.944,36.6,0],[0.944,36.6,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.2,0],[1.013,21.1,0],[1.013,39.5,0],[1.013,39.5,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,39.4,0],[1.013,38.9,0],[1.013,38.4,0],[1.013,21.1,0],[1.013,21.1,0],[1.013,21.1,0],[1.013,21.1,0],[1.013,21.1,0],[1.013,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.1,0],[2.027,21.0,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.7,0],[3.04,21.6,0],[3.04,21.6,0],[3.04,21.6,0],[1.013,40.0,0],[1.013,39.7,0],[1.013,39.5,0],[1.013,39.0,0],[1.013,37.1,0],[1.013,35.7,0],[1.013,35.6,0],[1.013,35.4,0],[1.013,35.2,0],[1.013,21.0,0],[1.013,20.9,0],[1.013,20.9,0],[0.507,38.9,0],[0.507,37.6,0],[0.507,36.4,0],[0.507,34.1,1],[0.507,33.5,0],[0.507,33.2,0],[2.027,39.9,0],[2.027,39.7,0],[2.027,39.5,0],[2.027,39.2,1],[2.027,38.9,0],[2.027,38.4,0],[2.027,38.4,0],[2.027,38.2,0],[1.013,40.0,0],[1.013,39.5,0],[1.013,39.0,0],[1.013,37.9,1],[1.013,37.2,0],[1.013,21.0,0],[1.013,21.0,0],[1.013,20.9,0],[1.013,20.9,0],[1.013,20.8,0],[1.013,20.8,1],[1.013,20.7,0],[1.013,20.7,0],[0.507,38.9,0],[0.507,38.3,0],[0.507,37.9,0],[0.507,37.2,0],[0.507,35.5,1],[2.027,39.9,0],[2.027,39.7,0],[2.027,39.5,0],[2.027,39.4,0],[2.027,39.2,1],[2.027,39.1,0],[2.027,39.0,0],[2.027,38.9,0],[2.027,38.5,0],[2.027,38.5,0],[2.027,38.4,0],[2.027,39.9,0],[2.027,39.4,0],[2.027,38.9,0],[2.027,38.8,1],[2.027,38.7,0],[2.027,38.6,0],[1.013,39.8,0],[1.013,39.5,0],[1.013,38.8,0],[1.013,38.5,0],[1.013,38.3,0],[1.013,38.1,0]]};
+/* figuras estilo artículo (SVG) */
+(function(){var SF='"Latin Modern Roman","CMU Serif","Cambria Math","Times New Roman",serif',BL='#2f5fb3',PU='#8b3a8f',OR='#c8641e',GR='#2a9d55';
+function ticks(a,b,n){var st=Math.pow(10,Math.floor(Math.log10((b-a)/n))),e=(b-a)/n/st;st*=e<1.5?1:e<3.5?2:e<7.5?5:10;var o=[];for(var v=Math.ceil(a/st)*st;v<=b+1e-9;v+=st)o.push(+v.toFixed(6));return o}
+function panel(el,o){var W=420,H=280,l=64,r=o.yR?58:16,t=30,bt=44,iw=W-l-r,ih=H-t-bt,X=function(v){return l+(v-o.x[0])/(o.x[1]-o.x[0])*iw},Y=function(v,ax){ax=ax||o.yL;return t+ih-(v-ax.r[0])/(ax.r[1]-ax.r[0])*ih};
+ var s='<svg viewBox="0 0 '+W+' '+H+'" font-family=\''+SF+'\' font-size="13">';
+ s+='<rect x="'+l+'" y="'+t+'" width="'+iw+'" height="'+ih+'" fill="#fff" stroke="#222" stroke-width="1"/>';
+ ticks(o.x[0],o.x[1],5).forEach(function(v){var x=X(v);s+='<line x1="'+x+'" y1="'+(t+ih)+'" x2="'+x+'" y2="'+(t+ih-5)+'" stroke="#222"/><line x1="'+x+'" y1="'+t+'" x2="'+x+'" y2="'+(t+5)+'" stroke="#222"/><text x="'+x+'" y="'+(t+ih+16)+'" text-anchor="middle" fill="#222">'+v+'</text>'});
+ function yax(ax,right){ticks(ax.r[0],ax.r[1],5).forEach(function(v){var y=Y(v,ax),x0=right?l+iw:l,d=right?-5:5;s+='<line x1="'+x0+'" y1="'+y+'" x2="'+(x0+d)+'" y2="'+y+'" stroke="'+ax.c+'"/><text x="'+(right?x0+6:x0-6)+'" y="'+(y+4)+'" text-anchor="'+(right?'start':'end')+'" fill="'+ax.c+'">'+v+'</text>'});
+  var xl=right?W-10:16;s+='<text transform="translate('+xl+','+(t+ih/2)+') rotate(-90)" text-anchor="middle" fill="'+ax.c+'">'+ax.lab+'</text>'}
+ yax(o.yL,false);if(o.yR)yax(o.yR,true);
+ s+='<text x="'+(l+iw/2)+'" y="'+(H-8)+'" text-anchor="middle" fill="#222">'+o.xl+'</text>';
+ s+='<text x="'+(l+6)+'" y="'+(t-10)+'" fill="#111" font-size="14">'+o.title+'</text>';
+ s+='<clipPath id="cp'+el+'"><rect x="'+l+'" y="'+t+'" width="'+iw+'" height="'+ih+'"/></clipPath><g clip-path="url(#cp'+el+')">';
+ (o.bands||[]).forEach(function(b){s+='<rect x="'+X(b[0])+'" y="'+t+'" width="'+(X(b[1])-X(b[0]))+'" height="'+ih+'" fill="'+b[2]+'"/>'});
+ o.ser.forEach(function(se){var ax=se.R?o.yR:o.yL;if(se.line){s+='<polyline fill="none" stroke="'+se.c+'" stroke-width="'+(se.w||1.6)+'"'+(se.dash?' stroke-dasharray="5 4"':'')+' points="'+se.d.map(function(p){return X(p[0]).toFixed(1)+','+Y(p[1],ax).toFixed(1)}).join(' ')+'"/>'}
+  else se.d.forEach(function(p){var x=X(p[0]),y=Y(p[1],ax);if(se.sq)s+='<rect x="'+(x-3.5)+'" y="'+(y-3.5)+'" width="7" height="7" fill="'+(se.open?'#fff':se.c)+'" stroke="'+se.c+'" stroke-width="1.2"/>';else s+='<circle cx="'+x+'" cy="'+y+'" r="'+(se.r||3.2)+'" fill="'+(se.open?'#fff':se.c)+'" stroke="'+se.c+'" stroke-width="1.2"/>'})});
+ s+='</g>';
+ if(o.leg){var ly=o.legY||t+14;o.leg.forEach(function(L,i){var x=o.legL?l+10:l+iw-150,y=(o.legB?t+ih-12-(o.leg.length-1-i)*17:ly+i*17);s+=(L.line?'<line x1="'+x+'" y1="'+(y-4)+'" x2="'+(x+18)+'" y2="'+(y-4)+'" stroke="'+L.c+'" stroke-width="1.6"'+(L.dash?' stroke-dasharray="5 4"':'')+'/>':(L.sq?'<rect x="'+(x+5)+'" y="'+(y-8)+'" width="7" height="7" fill="'+(L.open?'#fff':L.c)+'" stroke="'+L.c+'"/>':'<circle cx="'+(x+9)+'" cy="'+(y-4)+'" r="3.2" fill="'+(L.open?'#fff':L.c)+'" stroke="'+L.c+'"/>'))+'<text x="'+(x+24)+'" y="'+y+'" fill="#222" font-size="12">'+L.t+'</text>'})}
+ document.getElementById(el).innerHTML=s+'</svg>'}
+var dfh=PSI.df.filter(function(p){return p[0]<12.5}),dfc=PSI.df.filter(function(p){return p[0]>=13});
+panel('fa',{title:'a) Gota de n-heptano (1 atm)',x:[0,50],xl:'<tspan font-style="italic">t</tspan> (s)',yL:{r:[0,18],c:BL,lab:'d² (mm²)'},yR:{r:[0,28],c:PU,lab:'d<tspan baseline-shift="sub" font-size="10">llama</tspan> (mm)'},bands:[[12.8,45.8,'rgba(139,58,143,.07)']],
+ ser:[{d:PSI.d2,c:BL,r:2.6},{d:dfh,c:PU,R:1,r:2.4,open:1},{d:dfc,c:PU,R:1,r:2.4,sq:1,open:1}],leg:[{t:'d² gota',c:BL},{t:'llama caliente',c:PU,open:1},{t:'llama fría',c:PU,sq:1,open:1}]});
+panel('fb',{title:'b) Extinción frente a presión',x:[0.4,1.3],xl:'<tspan font-style="italic">p</tspan> (atm)',yL:{r:[0,4],c:'#222',lab:'D<tspan baseline-shift="sub" font-size="10">ext</tspan> (mm)'},
+ ser:[{d:FIG.hfm,c:OR,line:1,dash:1},{d:FIG.cfm,c:BL,line:1,dash:1},{d:FIG.hf,c:OR,r:3.6},{d:FIG.cf,c:BL,sq:1}],legY:112,leg:[{t:'llama caliente',c:OR},{t:'llama fría',c:BL,sq:1},{t:'modelo publicado',c:'#555',line:1,dash:1}]});
+panel('fc',{title:'c) FLEX: quemado frente a O₂',x:[10,40],xl:'O₂ (%)',yL:{r:[0,1.2],c:'#222',lab:'<tspan font-style="italic">K</tspan> (mm²/s)'},
+ ser:[{d:FIG.flex.filter(function(r){return!r[2]}),c:BL,open:1},{d:FIG.flex.filter(function(r){return r[2]}),c:OR,sq:1}],leg:[{t:'metanol',c:BL,open:1},{t:'heptano',c:OR,sq:1}]});
+panel('fd',{title:'d) ACME CFI-G: ¿llama fría?',x:[0.4,3.2],xl:'<tspan font-style="italic">p</tspan> (bar)',yL:{r:[15,45],c:'#222',lab:'O₂ (%)'},
+ ser:[{d:FIG.cfig.filter(function(r){return!r[2]}),c:'#888',open:1,r:2.8},{d:FIG.cfig.filter(function(r){return r[2]}),c:PU,r:3.6}],leg:[{t:'sin llama fría',c:'#888',open:1},{t:'con llama fría',c:PU}]});
+/* esquema del sistema */
+var s='<svg viewBox="0 0 900 440" font-family=\''+SF+'\' font-size="14"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#222"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#3b6fc4"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="'+OR+'"/></marker></defs>';
+function box(x,y,w,h,t,c,sub){s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#fff" stroke="'+(c||'#222')+'" stroke-width="1.4"/><text x="'+(x+w/2)+'" y="'+(y+h/2+(sub?-3:5))+'" text-anchor="middle" fill="#111">'+t+'</text>'+(sub?'<text x="'+(x+w/2)+'" y="'+(y+h/2+14)+'" text-anchor="middle" fill="#555" font-size="12">'+sub+'</text>':'')}
+function ar(p,m,d){s+='<polyline points="'+p+'" fill="none" stroke="'+(m==='ab'?'#3b6fc4':m==='ao'?OR:'#222')+'" stroke-width="1.3"'+(d?' stroke-dasharray="6 5"':'')+' marker-end="url(#'+(m||'ah')+')"/>'}
+/* cabina */
+s+='<rect x="20" y="40" width="250" height="330" rx="18" fill="none" stroke="#222" stroke-width="1.4"/><text x="145" y="30" text-anchor="middle" fill="#111">Cabina (ISS / base lunar)</text>';
+s+='<circle cx="80" cy="120" r="30" fill="none" stroke="'+OR+'" stroke-width="1.4"/><circle cx="80" cy="120" r="7" fill="#9bb4dd" stroke="#222"/><text x="80" y="172" text-anchor="middle" font-size="12" fill="#555">gota / material</text>';
+var sens=[['Cámara visible',75],['Infrarrojo / UV',125],['Gases CO, CH₂O',175],['Presión, O₂, T',225],['Flujo de aire',275]];
+sens.forEach(function(q){box(140,q[1]-18,118,36,q[0],'#222')});
+ar('110,120 138,93');ar('110,128 138,143');
+/* DAQ */
+box(320,150,120,70,'Adquisición','#222','DAQ · 10 Hz');sens.forEach(function(q){ar('258,'+q[1]+' 300,'+q[1]+' 300,185 318,185')});
+/* base NASA */
+box(500,40,150,60,'Base NASA PSI',OR,'674 ensayos');
+/* IA */
+box(500,150,150,70,'Motor IA',OR,'física + k-NN + confianza');ar('440,185 498,185');ar('575,100 575,148','ao');
+/* estados */
+box(710,130,170,110,'','#222');s+='<text x="795" y="152" text-anchor="middle" fill="#111">Máquina de estados</text>';['ACTIVO','LATENTE','PROBABLE','CONFIRMADO'].forEach(function(q,i){s+='<text x="795" y="'+(174+i*17)+'" text-anchor="middle" font-size="12" fill="'+[OR,PU,'#a07a10',GR][i]+'">'+q+'</text>'});ar('650,185 708,185');
+/* acciones */
+box(700,290,190,60,'Acción a bordo',GR,'alarma · ventilación · extintor');ar('795,240 795,288');
+ar('795,350 795,405 145,405 145,373','ah');s+='<text x="470" y="424" text-anchor="middle" font-size="12" fill="#555">respuesta en la cabina</text>';
+/* tierra */
+box(500,300,150,50,'Tierra (enlace)','#3b6fc4','actualiza y audita');ar('575,298 575,222','ab',1);ar('650,325 698,325','ab',1);
+s+='<text x="590" y="265" font-size="12" fill="#3b6fc4">opcional</text>';
+s+='</svg>';document.getElementById('fs').innerHTML=s;})();
+
+</script><style>.fnav{position:fixed;right:16px;bottom:16px;z-index:90;display:flex;gap:8px}.fnav a{display:inline-flex;align-items:center;gap:6px;height:42px;padding:0 16px;border-radius:21px;background:rgba(11,17,28,.92);border:1px solid #243246;color:#4cc3ff;font:600 14px "Segoe UI",Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}.fnav a:hover{border-color:#4cc3ff}.fnav a.up{width:42px;padding:0;justify-content:center;opacity:0;pointer-events:none;transition:.25s}.fnav a.up.show{opacity:1;pointer-events:auto}</style><div class="fnav"><a href="#" class="up" aria-label="Subir">↑</a></div><script>(function(){var u=document.querySelector(".fnav .up");addEventListener("scroll",function(){u.classList.toggle("show",scrollY>500)},{passive:true});u.onclick=function(e){e.preventDefault();scrollTo({top:0,behavior:"smooth"})}})();</script></body></html>
